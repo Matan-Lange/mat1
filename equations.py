@@ -38,7 +38,7 @@ def sqrt(x: float, y: float) -> float:
     if x <= 0:
         return 0
 
-    return float('%0.6f' % timesY(y, 1/x))
+    return float('%0.6f' % XtimesY(y, 1/x))
 
 
 def calculate(x: float) -> float:

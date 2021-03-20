@@ -44,7 +44,7 @@ def sqrt(x: float, y: float) -> float:
     if x <= 0:
         return 0
 
-    return XtimesY(x, 1 / y)
+    return XtimesY(y, 1/x)
 
 
 def calculate(x: float) -> float:
@@ -53,6 +53,6 @@ def calculate(x: float) -> float:
     rvalue = exponent(x) * XtimesY(7, x) * XtimesY(x, -1) * sqrt(x, x)
     return  float('%0.6f' % rvalue)
 
-
+print(sqrt(2.5,4))
 
 

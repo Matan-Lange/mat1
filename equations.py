@@ -2,13 +2,13 @@
 def exponent(x: float) -> float:
     result = 1
     last_result = 0
-    counter = 0
+
     factorial = 1
     p_x = x
 
-    while last_result != result:
-        counter = counter + 1
-        factorial = factorial * counter
+    for i in range(1,100):
+
+        factorial = factorial * i
 
         last_result = result
         result = result + (x / factorial)
@@ -25,7 +25,7 @@ def Ln(x: float) -> float:
     y0 = -1
     y1 = 0
 
-    while y1 != y0:
+    for i in range(1,100):
         y0 = y1
         y1 = y0 + 2 * (x - exponent(y0)) / (x + exponent(y0))
     return y1
@@ -51,7 +51,7 @@ def calculate(x: float) -> float:
     if x< 0 :
         return 0
     rvalue = exponent(x) * XtimesY(7, x) * XtimesY(x, -1) * sqrt(x, x)
-    return rvalue
+    return  float('%0.6f' % rvalue)
 
 
 
